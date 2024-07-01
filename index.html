@@ -15,6 +15,62 @@
         accurateTrackBounce:true
    });
 </script>
+        .telegram-button {
+    position: fixed;
+    right: 13px;
+    bottom: 90px;
+    transform: translate(-50%, -50%);
+    background: #0088cc; /*цвет кнопки*/
+    border-radius: 50%;
+    width: 55px; /*ширина кнопки*/
+    height: 55px; /*высота кнопки*/
+    color: #fff;
+    text-align: center;
+    line-height: 53px; /*центровка иконки в кнопке*/
+    font-size: 35px; /*размер иконки*/
+    z-index: 9999;
+}
+.telegram-button a {
+    color: #fff;
+}
+.telegram-button:before,
+.telegram-button:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #0088cc; /*цвет анимированных волн от кнопки*/
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden; 
+}
+ 
+.telegram-button:after{
+    animation-delay: .5s;
+}
+ 
+@keyframes animate
+{
+    0%
+    {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
 <style>
     html {
   scroll-behavior: smooth;
@@ -30,7 +86,6 @@
    }
 </style>
 
-<a href="https://t.me/dmfn_serv_odi_ask_bot" target="_blank" title="Написать в Telegram" rel="noopener noreferrer"></a>
 <noscript><div><img src="https://mc.yandex.ru/watch/97670162" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
         <title>«Домофон-сервис» в городе Одинцово</title></title.>
@@ -90,6 +145,7 @@
             <a href="assets/page2.jpg" style="color: #B0E0E6">Посмотреть страницу 2 </a> <br>
             <a href="assets/page3.jpg" style="color: #B0E0E6">Посмотреть страницу 3 </a> <br>
             <a href="assets/page4.jpg" style="color: #B0E0E6">Посмотреть страницу 4 </a> <br>
+            <a href="https://t.me/@dmfn_serv_odi_ask_bot" target="_blank" title="Написать в Telegram" rel="noopener noreferrer"><div class="telegram-button"><i class="fa fa-telegram"></i></div></a>
             <br>
         </font>
     </body>
