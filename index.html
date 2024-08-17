@@ -15,7 +15,22 @@
         accurateTrackBounce:true
    });
 </script>
-
+<link href="path/to/toast.min.css" rel="stylesheet">
+<script src="path/to/toast.min.js"></script>
+        /*
+  title - название заголовка
+  text - текст сообщения
+  theme - тема
+  autohide - нужно ли автоматически скрыть всплывающее сообщение через interval миллисекунд
+  interval - количество миллисекунд через которые необходимо скрыть сообщение
+*/
+new Toast({
+  title: 'Заголовок',
+  text: 'Сообщение...',
+  theme: 'light',
+  autohide: true,
+  interval: 10000
+});
 <style>
     html {
   scroll-behavior: smooth;
