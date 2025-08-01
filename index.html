@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
     <style> 
+
+:root {
+--bg-color: white;
+--text-color: black;
+}
+.dark-mode {
+--bg-color: #121212;
+--text-color: white;
+}
+body {
+background-color: var(--bg-color);
+color: var(--text-color);
+}
     *{ margin: 0px; padding: 0px;}
     .s1{
     display: flex;
@@ -20,12 +33,10 @@
     text-decoration: none;
     font-size: 30px;
     }
-
     .topnav a:hover {
     background-color:#98FB98;
     color: black;
     }
-
     .topnav a.active {
     background-color: #4CAF50;
     color: white;
@@ -193,7 +204,97 @@
         font-size: 30px;
         font-weight: bold;
         margin-left: 35px;
-        color: red;
+        color:
+         red;
+    }
+
+    
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 999;
+        -webkit-animation: fade .6s;
+        -moz-animation: fade .6s;
+        animation: fade .6s;
+        overflow: auto;
+    }
+    .popup {
+        position:fixed;
+        left: 50%;
+        top: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -moz-transform:translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+         transform: translate(-50%,-50%);
+        min-width: 320px;
+        max-width: 600px;
+        position: absolute;
+        padding: 15px 20px;
+        border: 1px solid #383838;
+        background: #fefefe;
+        z-index: 1000;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        font: 14px/18px 'Tahoma', Arial, sans-serif;
+        -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+        -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+        box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+        -webkit-animation: fade .6s;
+        -moz-animation: fade .6s;
+        animation: fade .6s;
+    }
+    .close {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        border: none;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        background-color: rgba(0, 131, 119, 0.9);
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        outline: none;
+    
+    }
+    .close:before {
+        color: rgba(255, 255, 255, 0.9);
+        content: "X";
+        font-family:  Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: none;
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    /* кнопка закрытия при наведении */
+    .close:hover {
+        background-color: rgba(252, 20, 0, 0.8);
+    }
+    .window-text-1 {
+        font-weight: bold;
+        font-size: 35px;
+    }
+    .window-text-2 {
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 1.5
     }
 </style>
     <head>
@@ -202,28 +303,27 @@
            «Домофон-сервис» в г.Одинцово
         </title>
         <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
-    	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    	<link rel="icon" href="assets/favicon.ico" />
-    	<link rel="manifest" href="assets/site.webmanifest" />
+	    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+	    <link rel="shortcut icon" href="assets/favicon.ico" />
+	    <link rel="manifest" href="assets/site.webmanifest" />
+
     </head>
 <body>
-	
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-    ym(103380439, 'init', {webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/103380439" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-
+    
+<!-- Модальное Окно  -->
+<div id="overlay">
+    <div class="popup">
+        <h2 class="window-text-1">Внимание!</h2><br>
+        <p2 class="window-text-2">
+            За последнее время было зафиксировано большое количество случаев мошенничества!<br><br>
+            Если Вы получили сообщение/звонок о замене домофона и необходимости покупки и оплаты ключей - ОБРАТИТЕСЬ К НАМ!<br>
+            Мошенники могут представляться именами реальных сотрудников компании.<br>
+            Обезопасьте себя и других - уточняйте информацию по контактам, указанным на этом сайте.<br>
+            Будьте бдительны!
+        </p2>
+        <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
+    </div>
+</div>
     <body style="background: url(assets/bk1.jpg); background-size: 1920px 1400px; background-repeat: repeat"></body>
     <img class="logo" src="assets/logo.png"/>
 	<ul class="topnav">
@@ -274,7 +374,6 @@
         <span style="font-weight: bold;">Предлагаем собственникам жилых помещений
                                     обратиться к нам для установки на Ваш подъезд Умного домофона!<br>
                                     Все жители будут обеспечены ключами.
-
         </span></style>
 
          </div>
@@ -302,7 +401,7 @@
     <h2 id="send-message"></h2>
     <div class="block-name"><strong>• Как можно cвязаться с нами?</strong></div>
     <section class="s1">
-        <a href="callto:+7 (495) 596 16 03"><br>
+        <a href="callto:+7 (909) 915 30 68"><br>
         <img src="assets/call-btn.png" />
         </a>
     </section>
@@ -318,8 +417,7 @@
     </section><br>
     <section class="s1">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVwGRTbYjcDCa8XrslD75mXqtfZTykXidh9y6yE_2m2ZrT5g/viewform?embedded=true" width="1000" height="1000" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
-    </section>
-        
+    </section>  
     </div><br>
     <hr class="hr-washed">
     <h2 id="documents"></h2>
@@ -337,5 +435,10 @@
     <div class="excl-text-1">
         Благодарим за посещение нашего сайта!<br><br>
     </div>
+    
+<script type="text/javascript">
+        var delay_popup = 3000;
+        setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+</script>
 </body>
 </html>
