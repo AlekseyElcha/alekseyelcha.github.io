@@ -60,11 +60,11 @@ color: var(--text-color);
     margin-bottom: 15px;
    }
    .menu-bar-first {
-    font-size: 30px;
+    font-size: 33px;
     margin-left: 40px;
    }
    .menu-bar {
-    font-size: 30px;
+    font-size: 33px;
     margin-left: 40px;
    }
    menu:hover {
@@ -72,19 +72,19 @@ color: var(--text-color);
     text-decoration: underline;
    }
    .text-1 {
-    font-size: 30px;
+    font-size: 38px;
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 10px;
    }
    .main-text-3 {
-    font-size: 30px;
+    font-size: 38px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 10px;
    }
    .main-text {
-    font-size: 30px;
+    font-size: 38px;
     text-align: center;
     margin-bottom: 10px;
     margin-left: 50px;
@@ -96,13 +96,13 @@ color: var(--text-color);
    .block-name {
     text-align: center;
     font-family: 'Arial', 'Verdana', sans-serif;
-    font-size: 32px;
+    font-size: 38px;
     margin-left: 35px;
     color: #800000;
    }
    .block-name-1 {
     font-family: 'Arial', 'Verdana', sans-serif;
-    font-size: 32px;
+    font-size: 38px;
     margin-left: 35px;
     color: #800000;
    }
@@ -182,7 +182,7 @@ color: var(--text-color);
         margin-top: 15px;
     }
     .main-text-local-1 {
-        font-size: 30px;
+        font-size: 33px;
         margin-left: 10px;
         margin-bottom: 10px;
         margin-top: 10px;
@@ -190,7 +190,7 @@ color: var(--text-color);
     .excl-text {
         text-align: center;
         font-family: 'Arial', 'Verdana', sans-serif;
-        font-size: 30px;
+        font-size: 37px;
         font-weight: bold;
         margin-left: 35px;
         color: #800000;
@@ -231,8 +231,8 @@ color: var(--text-color);
         -moz-transform:translate(-50%,-50%);
         -webkit-transform: translate(-50%,-50%);
          transform: translate(-50%,-50%);
-        min-width: 800px;
-        max-width: 1400px;
+        min-width: 600px;
+        max-width: 800px;
         position: absolute;
         padding: 15px 20px;
         border: 1px solid #383838;
@@ -292,7 +292,7 @@ color: var(--text-color);
     }
     .window-text-2 {
         font-weight: normal;
-        font-size: 30px;
+        font-size: 32px;
         line-height: 1.5
     }
     .btn-img {
@@ -319,7 +319,7 @@ color: var(--text-color);
         .btn-wrapper {
             margin: 0 10px;
         }
-.btn-img-1 {
+        .btn-img-1 {
             width: auto;
             height: auto;
             padding: 0;
