@@ -40,9 +40,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 	    <link rel="shortcut icon" href="assets/favicon.ico" />
 	    <link rel="manifest" href="assets/site.webmanifest" />
+
+		<!--Гирлянда на сайт css -->
+		<style type="text/css">
+		#garland {
+		position:absolute;
+		top:0;left:0;
+		background-image:url('https://sitespectr.ru/test/girlyanda/christmas-lights.png');
+		height:36px;width:100%;overflow:hidden;z-index:99}
+		.garland_1 {background-position: 0 0}
+		.garland_2 {background-position: 0 -36px}
+		.garland_3 {background-position: 0 -72px}
+		.garland_4 {background-position: 0 -108px}
+		</style>
+		<!--Гирлянда на сайт javascript -->
+		<script type="text/javascript">
+		function garland() {
+		nums = document.getElementById('nums_1').innerHTML
+		if(nums == 1) {document.getElementById('garland').className='garland_1';
+		document.getElementById('nums_1').innerHTML='2'}
+		if(nums == 2) {document.getElementById('garland').className='garland_2';
+		document.getElementById('nums_1').innerHTML='3'}
+		if(nums == 3) {document.getElementById('garland').className='garland_3';
+		document.getElementById('nums_1').innerHTML='4'}
+		if(nums == 4) {document.getElementById('garland').className='garland_4';
+		document.getElementById('nums_1').innerHTML='1'}
+		}
+		setInterval(function(){garland()}, 600)
+		</script>
+		
     </head>
 <body>
-    
+    <!--Гирлянда на сайт html -->
+	<div id="garland" class="garland_4">
+	<div id="nums_1">1</div>
+	</div>
+	
 <!-- Модальное Окно (всплывающее уведомление)  -->
 <div id="overlay">
     <div class="popup">
@@ -205,6 +238,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<!-- Виджеты Smartarget-->
 	<script type="text/javascript" src="https://smartarget.online/loader.js?u=10b56cd2b5f6ef6eeb5974d0db6b2717fcbcab66"></script>
 </html>
+
 
 
 
