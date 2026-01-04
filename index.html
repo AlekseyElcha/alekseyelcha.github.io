@@ -372,6 +372,17 @@
 </script>
 
 <!-- Виджеты Smartarget  -->
-<script type="text/javascript" src="https://smartarget.online/loader.js?u=10b56cd2b5f6ef6eeb5974d0db6b2717fcbcab66"></script>
+<!-- <script type="text/javascript" src="https://smartarget.online/loader.js?u=10b56cd2b5f6ef6eeb5974d0db6b2717fcbcab66"></script> -->
+<script>
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        var script = document.createElement('script');
+        script.src = 'https://smartarget.online/loader.js?u=10b56cd2b5f6ef6eeb5974d0db6b2717fcbcab66';
+        script.async = true;
+        document.body.appendChild(script);
+    }, 1000);
+});
+</script>
 </body>
 </html>
+
