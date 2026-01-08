@@ -347,4 +347,14 @@ color: var(--text-color);
         .btn-vertical-spacing:last-child {
             margin-bottom: 0 !important;
         }
+    .advertisement {
+        display: inline-block;
+        position: relative;
+        border: 1px solid #383838;
+    }
 
+    .advertisement img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
