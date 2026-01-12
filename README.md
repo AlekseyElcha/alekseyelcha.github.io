@@ -1,7 +1,5 @@
-This site was created for personal uses.
+Сайт для личных целей.
 
-Languages: HTML + CSS + JavaScript
+(он рабочий)
 
-I tried using Bootstrap framework a bit:)
-
-Uses Yandex Metrics and Google Tag Manager.
+Используются Yandex Metrics and Google Tag Manager.
