@@ -3,3 +3,5 @@
 (он рабочий)
 
 Используются Yandex Metrics and Google Tag Manager.
+
+Я не фронтендер, прошу не судить строго:)
