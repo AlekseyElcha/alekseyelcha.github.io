@@ -41,83 +41,8 @@
     <link rel="shortcut icon" href="assets/favicon.ico" />
     <link rel="manifest" href="assets/site.webmanifest" />
 
-    <!--Гирлянда на сайт css -->
-    <style type="text/css">
-        #garland {
-            position: fixed;
-            top:0;left:0;
-            background-image:url('https://sitespectr.ru/test/girlyanda/christmas-lights.png');
-            height:35px;width:100%;overflow:hidden;
-            z-index:9999;
-            pointer-events: none;
-        }
-        .garland_1 {background-position: 0 0}
-        .garland_2 {background-position: 0 -36px}
-        .garland_3 {background-position: 0 -72px}
-        .garland_4 {background-position: 0 -108px}
-
-        /* Стиль для скрытого элемента с номером */
-        #nums_1 {
-            display: none;
-        }
-
-        /* Стили для снега */
-        .snowflake {
-            position: fixed;
-            top: -20px;
-            color: white;
-            font-size: 1em;
-            text-shadow: 0 0 5px white;
-            user-select: none;
-            z-index: 9998;
-            pointer-events: none;
-            opacity: 0.9;
-        }
-
-        /* Для разных видов снежинок */
-        .snowflake.small {
-            font-size: 12px;
-            opacity: 0.7;
-        }
-
-        .snowflake.medium {
-            font-size: 18px;
-        }
-
-        .snowflake.large {
-            font-size: 24px;
-            opacity: 0.8;
-        }
-
-        /* Добавляем отступ сверху для основного контента */
-        body {
-            padding-top: 40px;
-        }
-    </style>
-
 </head>
-<body style="background: url(assets/bk1.jpg); background-size: 1920px 1400px; background-repeat: repeat; padding-top: 40px;">
-<!--Гирлянда на сайт html -->
-<div id="garland" class="garland_4">
-    <div id="nums_1">1</div>
-</div>
-
-<!-- Снег будет создаваться динамически через JS -->
-
-<!-- Модальное
-<div id="overlay">
-    <div class="popup">
-        <h2 class="window-text-1">Внимание!</h2><br>
-        <p class="window-text-2">
-            Уважаемые абоненты, нами было зафиксировано большое количество случаев по замене домофона и покупке ключей по телефону!<br>
-            Информируем Вас, что ООО «Домофон-сервис» <br>не звонит своим абонентам.<br>
-            Мошенники могут представляться именами реальных сотрудников компании.<br>
-            При возникновении подозрений - обратитесь к нам по контактам, указанным на этом сайте.
-        </p>
-        <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
-    </div>
-</div>
--->
+<body style="background: url(assets/bk1.jpg); background-size: 1920px 1400px; background-repeat: repeat; padding-top: 15px;">
 
 <img class="logo" src="assets/logo.png"/>
 <ul class="topnav">
@@ -128,7 +53,6 @@
     <a  href="#send-message" style="text-decoration:none"><span class="ca">Связаться с нами</span></a>
     <a  href="#documents" style="text-decoration:none"><span class="ca">Договор по обслуживанию</span></a>
 </ul>
-<br>
 <h2 id="about"></h2>
 <hr class="hr-washed">
 <section>
@@ -162,14 +86,16 @@
     ∗ Время работы: пн-пт 9:00-18:00,
     перерыв 13:00-14:00 <br>
     <section class="s1">
+        <div class="map-container">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ada32a343d8851a9c18942a60fadfefe78cb1fe6f11d765489dcc4a6bc38d4302&amp;width=636&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
     </section>
     <h2 id="smart-intercom"></h2>
     <hr class="hr-washed">
     <div class="block-name"><strong>• Умный домофон</strong></div>
     <div class="inline-block">
         <section class="s1">
-            <img src="assets/pict-1.png">
+            <img src="assets/pict-1.png" style="border-radius: 12px">
         </section>
         <div class="main-text">
         <span style="font-weight: bold;">Предлагаем собственникам жилых помещений
@@ -217,10 +143,10 @@
     <hr class="hr-washed">
 
 
-    <!-- тест блока рекламы -->
+    <!-- блок рекламы -->
      <div class="advertisement">
         <a href="https://www.ecotelecom.ru/about/promo/dropped_prices_promo/" target="_blank">
-            <img src="assets/advert-1.png" alt="">
+            <img src="assets/advert-1.png" alt="" style="border-radius: 12px">
         </a>
     </div>
 
@@ -229,17 +155,17 @@
         <div class="d-flex flex-column align-items-center">
             <div class="btn-vertical-spacing">
                 <a href="tel:+74955961603" class="btn-img-1 d-block" target="_blank">
-                    <img src="assets/call-btn.png" alt="Позвонить">
+                    <img src="assets/call-btn.png" alt="Позвонить" style="border-radius: 12px">
                 </a>
             </div>
             <div class="btn-vertical-spacing">
                 <a href="mailto:5961603@mail.ru" class="btn-img-1 d-block" target="_blank">
-                    <img src="assets/mail-btn.png" alt="Почта">
+                    <img src="assets/mail-btn.png" alt="Почта" style="border-radius: 12px">
                 </a>
             </div>
             <div class="btn-vertical-spacing">
                 <a href="https://t.me/dmfn_serv_odi_ask_bot" class="btn-img-1 d-block" target="_blank">
-                    <img src="assets/tg-button.png" alt="Телеграм-бот">
+                    <img src="assets/tg-button.png" alt="Телеграм-бот" style="border-radius: 12px">
                 </a>
             </div>
         </div>
@@ -264,118 +190,6 @@
 <div class="excl-text-1">
     Благодарим за посещение нашего сайта!<br><br>
 </div>
-
-<script type="text/javascript">
-    // Гирлянда
-    function garland() {
-        nums = document.getElementById('nums_1').innerHTML
-        if(nums == 1) {
-            document.getElementById('garland').className='garland_1';
-            document.getElementById('nums_1').innerHTML='2'
-        }
-        if(nums == 2) {
-            document.getElementById('garland').className='garland_2';
-            document.getElementById('nums_1').innerHTML='3'
-        }
-        if(nums == 3) {
-            document.getElementById('garland').className='garland_3';
-            document.getElementById('nums_1').innerHTML='4'
-        }
-        if(nums == 4) {
-            document.getElementById('garland').className='garland_4';
-            document.getElementById('nums_1').innerHTML='1'
-        }
-    }
-    setInterval(function(){garland()}, 600);
-
-    // Снегопад - простая реализация без внешних зависимостей
-    function createSnowflake() {
-        const snowflake = document.createElement('div');
-        snowflake.className = 'snowflake';
-
-        // Случайный символ снежинки
-        const snowflakeChars = ['❄', '❅', '❆', '✻', '✼', '✽'];
-        const randomChar = snowflakeChars[Math.floor(Math.random() * snowflakeChars.length)];
-        snowflake.innerHTML = randomChar;
-
-        // Случайный размер
-        const sizeClasses = ['small', 'medium', 'large'];
-        const randomSize = sizeClasses[Math.floor(Math.random() * sizeClasses.length)];
-        snowflake.classList.add(randomSize);
-
-        // Случайная позиция по горизонтали
-        const startPos = Math.random() * window.innerWidth;
-        snowflake.style.left = startPos + 'px';
-
-        // Случайная начальная прозрачность
-        snowflake.style.opacity = Math.random() * 0.7 + 0.3;
-
-        // Случайная скорость падения
-        const fallSpeed = Math.random() * 2 + 1;
-
-        // Случайное горизонтальное движение (дрейф)
-        const horizontalSpeed = Math.random() * 1 - 0.5;
-
-        // Случайное вращение
-        let rotation = 0;
-        const rotationSpeed = Math.random() * 2 - 1;
-
-        document.body.appendChild(snowflake);
-
-        let posY = -20;
-        let posX = startPos;
-
-        function animate() {
-            posY += fallSpeed;
-            posX += horizontalSpeed;
-            rotation += rotationSpeed;
-
-            snowflake.style.top = posY + 'px';
-            snowflake.style.left = posX + 'px';
-            snowflake.style.transform = `rotate(${rotation}deg)`;
-
-            // Легкое мерцание
-            if (Math.random() > 0.9) {
-                snowflake.style.opacity = Math.random() * 0.5 + 0.5;
-            }
-
-            // Если снежинка упала ниже экрана, удаляем её
-            if (posY > window.innerHeight + 20) {
-                snowflake.remove();
-                return;
-            }
-
-            // Если снежинка ушла слишком далеко вбок
-            if (posX < -50 || posX > window.innerWidth + 50) {
-                snowflake.remove();
-                return;
-            }
-
-            // Продолжаем анимацию
-            requestAnimationFrame(animate);
-        }
-        animate();
-    }
-
-    // Автозапуск модального окна
-    window.onload = function() {
-        setTimeout(function() {
-            document.getElementById('overlay').style.display = 'block';
-        }, 1000);
-
-        // Запускаем создание снежинок
-        setInterval(createSnowflake, 100);
-    };
-
-    // Также создаем несколько снежинок сразу при загрузке
-    window.addEventListener('load', function() {
-        for (let i = 0; i < 20; i++) {
-            setTimeout(() => createSnowflake(), i * 100);
-        }
-    });
-
-
-</script>
 
 <!-- Виджеты Smartarget  -->
 <!-- <script type="text/javascript" src="https://smartarget.online/loader.js?u=10b56cd2b5f6ef6eeb5974d0db6b2717fcbcab66"></script> -->

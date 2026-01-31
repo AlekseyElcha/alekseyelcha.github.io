@@ -17,6 +17,10 @@ color: var(--text-color);
     margin-left: 50px;
     margin-bottom: 15px;
     }
+    .map-container {
+        border-radius: 12px;
+        overflow: hidden;
+    }
     .topnav {
     background-color: #e7ffe3;
     overflow: hidden;
@@ -110,6 +114,7 @@ color: var(--text-color);
     width: 100px;
     height: 100px;
     float: right;
+    margin-right: 15px;
    }
    .hr-washed {
 	margin: 20px 0;
