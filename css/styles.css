@@ -362,3 +362,8 @@ color: var(--text-color);
         max-width: 100%;
         height: auto;
     }
+
+    .booklet{
+        position: relative;
+        justify-content: center;
+    }
