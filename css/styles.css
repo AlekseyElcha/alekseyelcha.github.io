@@ -367,3 +367,10 @@ color: var(--text-color);
         position: relative;
         justify-content: center;
     }
+
+    .payment{
+        color: black;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
