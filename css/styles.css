@@ -230,16 +230,15 @@ color: var(--text-color);
         overflow: auto;
     }
     .popup {
-        position:relative;
+        position: fixed;  /* Изменено с absolute на fixed */
         left: 50%;
         top: 50%;
-        -ms-transform: translate(-50%,-50%);
-        -moz-transform:translate(-50%,-50%);
-        -webkit-transform: translate(-50%,-50%);
-         transform: translate(-50%,-50%);
-        min-width: 600px;
+        -ms-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        min-width: 800px;
         max-width: 600px;
-        position: absolute;
         padding: 15px 20px;
         border: 1px solid #383838;
         background: #fefefe;
@@ -256,6 +255,7 @@ color: var(--text-color);
         -webkit-animation: fade .6s;
         -moz-animation: fade .6s;
         animation: fade .6s;
+        margin: 0;
     }
     .close {
         top: 10px;
