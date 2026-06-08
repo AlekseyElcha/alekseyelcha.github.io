@@ -52,7 +52,19 @@
             Обезопасьте себя и других - уточняйте достоверную информации у нас по контактам, указанным на этом сайте.<br>
             Будьте бдительны!
         </p2>
-        <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
+        <button class="close" title="Закрыть"></button>
+    </div>
+</div>
+<div id="overlay-2" class="overlay">
+    <div class="popup">
+        <h2 class="window-text-1">Новая возможность задать вопрос!</h2>
+        <p class="window-text-2">
+            Теперь Вы можете задать свой вопрос при помощи нашего нового удобного веб-сервиса обращений!
+        </p>
+        <div class="popup-buttons">
+            <a href="https://ask.domofon-servis-odi.ru" class="btn btn-primary" title="Перейти к сервису">Перейти</a>
+            <button class="btn btn-secondary" title="Закрыть">Закрыть</button>
+        </div>
     </div>
 </div>
 <ul class="topnav">
@@ -247,18 +259,88 @@
 
 <!--</script>-->
 <script type="text/javascript">
-    var delay_popup = 2000;
+    var DELAY_FIRST = 2000;
+    var DELAY_SECOND = 3500;
 
-    if (!sessionStorage.getItem('popupShown')) {
-        setTimeout(function() {
-            document.getElementById('overlay').style.display = 'block';
-            sessionStorage.setItem('popupShown', 'true');
-        }, delay_popup);
+    var isFirstPopupOpen = false;
+    var secondPopupScheduled = false;
+
+    function showPopup(id) {
+        var el = document.getElementById(id);
+        if (el) el.style.display = 'block';
     }
 
-    // Обработчик закрытия окна
-    document.querySelector('.close').addEventListener('click', function() {
-        document.getElementById('overlay').style.display = 'none';
+    function hidePopup(id) {
+        var el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    }
+
+    function showSecondPopup() {
+        if (!secondPopupScheduled) {
+            secondPopupScheduled = true;
+            setTimeout(function() {
+                showPopup('overlay-2');
+            }, DELAY_SECOND);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        hidePopup('overlay');
+        hidePopup('overlay-2');
+
+        var firstPopupShownBefore = sessionStorage.getItem('firstPopupShown');
+        var secondPopupShownBefore = sessionStorage.getItem('secondPopupShown');
+
+        if (!firstPopupShownBefore) {
+            setTimeout(function() {
+                showPopup('overlay');
+                isFirstPopupOpen = true;
+                sessionStorage.setItem('firstPopupShown', 'true');
+            }, DELAY_FIRST);
+        } else if (!secondPopupShownBefore) {
+            showPopup('overlay-2');
+        }
+
+        var overlay1 = document.getElementById('overlay');
+        if (overlay1) {
+            var closeButtons1 = overlay1.querySelectorAll('button, .close, .btn');
+            closeButtons1.forEach(function(btn) {
+                var newBtn = btn.cloneNode(true);
+                btn.parentNode.replaceChild(newBtn, btn);
+                newBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    hidePopup('overlay');
+                    isFirstPopupOpen = false;
+                    setTimeout(function() {
+                        if (!sessionStorage.getItem('secondPopupShown')) {
+                            showPopup('overlay-2');
+                        }
+                    }, DELAY_SECOND);
+                });
+            });
+        }
+
+        var overlay2 = document.getElementById('overlay-2');
+        if (overlay2) {
+            var closeButtons2 = overlay2.querySelectorAll('.btn-secondary, button');
+            closeButtons2.forEach(function(btn) {
+                var newBtn = btn.cloneNode(true);
+                btn.parentNode.replaceChild(newBtn, btn);
+                newBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    hidePopup('overlay-2');
+                    sessionStorage.setItem('secondPopupShown', 'true');
+                });
+            });
+
+            var linkBtn = overlay2.querySelector('.btn-primary');
+            if (linkBtn) {
+                linkBtn.addEventListener('click', function() {
+                    sessionStorage.setItem('secondPopupShown', 'true');
+                });
+            }
+        }
     });
 </script>
 </body>
